@@ -1,0 +1,151 @@
+$utilities: (
+  //margins
+  "margin-left":
+    (
+      responsive: true,
+      property: margin-left,
+      class: ml,
+      values:
+        map-merge(
+          $spacers,
+          (
+            auto: auto,
+          )
+        ),
+    ),
+  "margin-right": (
+    responsive: true,
+    property: margin-right,
+    class: mr,
+    values:
+      map-merge(
+        $spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  "margin-top": (
+    responsive: true,
+    property: margin-top,
+    class: mt,
+    values:
+      map-merge(
+        $spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  "margin-bottom": (
+    responsive: true,
+    property: margin-bottom,
+    class: mb,
+    values:
+      map-merge(
+        $spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  "margin-inline": (
+    responsive: true,
+    property: margin-inline,
+    class: mx,
+    values:
+      map-merge(
+        $spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  "margin-block": (
+    responsive: true,
+    property: margin-block,
+    class: my,
+    values:
+      map-merge(
+        $spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  //margins
+  //paddings
+  "padding-left":
+    (
+      responsive: true,
+      property: padding-left,
+      class: pl,
+      values:
+        map-merge(
+          $spacers,
+          (
+            auto: auto,
+          )
+        ),
+    ),
+  "padding-right": (
+    responsive: true,
+    property: padding-right,
+    class: pr,
+    values:
+      map-merge(
+        $spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  "padding-top": (
+    responsive: true,
+    property: padding-top,
+    class: pt,
+    values:
+      map-merge(
+        $spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  "padding-bottom": (
+    responsive: true,
+    property: padding-bottom,
+    class: pb,
+    values:
+      map-merge(
+        $spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  "padding-inline": (
+    responsive: true,
+    property: padding-inline,
+    class: px,
+    values:
+      map-merge(
+        $spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  "padding-block": (
+    responsive: true,
+    property: padding-block,
+    class: py,
+    values:
+      map-merge(
+        $spacers,
+        (
+          auto: auto,
+        )
+      ),
+  )
+);

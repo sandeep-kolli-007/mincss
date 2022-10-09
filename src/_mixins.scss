@@ -1,0 +1,21 @@
+//media query
+@mixin media-query($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin responsive-breakpoint($prefix, $responsive, $suffix) {
+  .#{$prefix}-#{$suffix} {
+    @content;
+  }
+  @if $responsive {
+    @each $breakpoint in map-keys($grid-breakpoints) {
+      @include media-query(map-get($grid-breakpoints, $breakpoint)) {
+        .#{$prefix}-#{$breakpoint}-#{$suffix} {
+          @content;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@import "variables";
+@import "mixins";
+@import "utilities";
+
+@each $utility in map-keys($utilities) {
+  // @each $breakpoint in map-keys($grid-breakpoints) {
+  @each $key in map-keys(map-get($utilities, $utility, "values")) {
+    @each $value in $key {
+      @include responsive-breakpoint(
+        map-get($utilities, $utility, "class"),
+        map-get($utilities, $utility, "responsive"),
+        $value
+      ) {
+        $class: #{map-get($utilities, $utility, "class")}-#{$value};
+        #{map-get($utilities, $utility, "property")}: map-get(
+          $utilities,
+          $utility,
+          "values",
+          $value
+        );
+      }
+    }
+    // }
+  }
+}
+
+ 
+
+// @each $utility in map-keys($utilities) {
+//   @each $breakpoint in map-keys($grid-breakpoints) {
+//     @each $key in map-keys(map-get($utilities, $utility, "values")) {
+//       @each $value in $key {
+//         @include responsive-breakpoint(
+//           map-get($utilities, $utility, "class"),
+//           map-get($grid-breakpoints, $breakpoint),
+//           $breakpoint,
+//           map-get($utilities, $utility, "responsive"),
+//           $value
+//         ) {
+//           $class: #{map-get($utilities, $utility, "class")}-#{$value};
+//           #{map-get($utilities, $utility, "property")}: map-get(
+//             $utilities,
+//             $utility,
+//             "values",
+//             $value
+//           );
+//         }
+//       }
+//     }
+//   }
+// }

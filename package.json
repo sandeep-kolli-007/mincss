@@ -1,0 +1,32 @@
+{
+	"name": "@sandeep-kolli-007/mintcss",
+	"version": "0.0.1",
+	"author": "sandeep kolli",
+	"description": "css library for web.",
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com/sandeep-kolli-007"
+	},
+	"dependencies": {
+		"sass": "^1.55.0",
+		"semver": "^7.3.7"
+	},
+	"devDependencies": {
+		"@rollup/plugin-commonjs": "^21.0.1",
+		"@rollup/plugin-node-resolve": "^13.0.6",
+		"@rollup/plugin-typescript": "^8.3.0",
+		"rollup": "^2.60.0",
+		"rollup-plugin-dts": "^4.0.1",
+		"tslib": "^2.4.0"
+	},
+	"scripts": {
+		"rollup": "rollup -c",
+		"build-sass": "sass --watch src:public"
+	},
+	"type": "module",
+	"main": "dist/cjs/index.js",
+	"module": "dist/esm/index.js",
+	"files": [
+		"dist"
+	],
+	"types": "dist/index.d.ts"
+}
